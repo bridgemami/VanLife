@@ -1,13 +1,13 @@
-import React from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
 import { getHostVans } from "../../api"
 
 export default function Dashboard() {
-    const [vans, setVans] = React.useState([])
-    const [loading, setLoading] = React.useState(false)
-    const [error, setError] = React.useState(null)
-    React.useEffect(() => {
+    const [vans, setVans] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
+    useEffect(() => {
         setLoading(true)
         getHostVans()
             .then(data => setVans(data))

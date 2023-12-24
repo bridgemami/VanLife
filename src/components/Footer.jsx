@@ -1,5 +1,5 @@
-export default function Footer () {
-    return (<footer>
-        <p>&copy; 2024 #VANLIFE</p>
-      </footer>)
+export default function Footer() {
+  return (
+      <footer>&#169; 2024 #VANLIFE</footer>
+  )
 }
